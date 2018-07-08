@@ -1,0 +1,2 @@
+# prettyingan-presentation
+Presentation for #PrettyInGAN Visual Art with AI/Machine Learning.  We'll explore the art of @glagolista and @DrBeef_. These artists use machine learning algorithms as one of their tools. They combine input data, algorithms, and Nvidia GPUs to create works of art.  We'll also explore the tools and some of the techniques they are using. What are generative adversarial networks, GANs, and how you can learn more? What machine learning assisted art can you make next?
