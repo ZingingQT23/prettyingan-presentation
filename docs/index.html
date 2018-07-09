@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>reveal-md</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/moon.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+## Intro
+
+Scott Mueller
+Co-organizer
+
+smueller.tampa.ai@gmail.com
+
+https://ai-tampa.github.io/prettyingan-presentation
+
+[AI-Tampa on Twitter](https://twitter.com/AiTampa)</script></section><section  data-markdown><script type="text/template">## Tampa.ai
+
+Looking for Presenters</script></section><section  data-markdown><script type="text/template">## Study Group
+
+https://ai-tampa-study-group.github.io/meetings/
+
+[AI-Tampa Slack Invite](https://join.slack.com/t/ai-tampa/shared_invite/enQtMzcxOTQ2NjA2NTI5LTM1YzhiMzcyZGFhNGIzNDU3OTBlYTdkNzgxZTM1ODkzNDVjN2FhYmFkYmYzZjI1YmI0NDRmYzY1N2MzMzM2NTM)
+</script></section><section  data-markdown><script type="text/template">## Study Group Activities
+
+Discussions on Interesting Events
+
+Show and Tell on Progress
+
+Kaggle Competitions
+</script></section><section  data-markdown><script type="text/template">## What are we working on?
+
+Toxic Comment Competition, https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge</script></section><section  data-markdown><script type="text/template">## What have we been working on?
+
+Kaggle Plant Seedling Competition, https://www.kaggle.com/c/plant-seedlings-classification
+
+Restaurant Visitor Forecasting, https://www.kaggle.com/c/recruit-restaurant-visitor-forecasting
+</script></section><section  data-markdown><script type="text/template">## Results of Previous Meetings
+
+Our code from previous meetings can be found at:
+
+https://github.com/ai-tampa-study-group
+</script></section><section  data-markdown><script type="text/template"># #PrettyInGAN 
+
+Visual Art with AI
+
+Scott Mueller</script></section><section  data-markdown><script type="text/template"><img src="./images/intro/26804214678_5ebd8fb3d2_o.jpg"  width="700"></script></section><section  data-markdown><script type="text/template">## Helena Sarin
+
+https://twitter.com/glagolista
+
+https://www.flickr.com/photos/tarelki/sets/72157694589553071
+</script></section><section  data-markdown><script type="text/template"><img src="./images/intro/40652427841_9de4699329_o.jpg"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/intro/40742328405_31590d1f22_o.jpg"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/intro/41468061124_805f4d94b1_o.jpg"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/intro/42013165502_93b9dd8939_o.jpg"  width="700"></script></section><section  data-markdown><script type="text/template">## What is Needed?
+
+* Training Data
+* Suitable Architecture
+* Appropriate Loss Function
+* Computer System
+    * Nvidia GPU
+    * Differentiable Program (Deep Learning) Framework
+        * PyTorch, Keras/Tensorflow, etc.
+</script></section><section  data-markdown><script type="text/template">## Style Transfer
+
+Convert an image into an image painted in the style of a painting.
+
+<img src="./images/fastai/Robin.png"  width="400">
+<img src="./images/fastai/RobinAsVanGogh.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Training Data
+
+<img src="./images/style_xfer/noise.png"  width="400">
+<img src="./images/wctss/_26169029_1.jpg"  width="400">
+<img src="./images/web/9a019eb26a6.jpg"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Content Loss 
+
+How much like the source image?
+
+<img src="./images/style_xfer/Noise2Content.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Style Loss
+
+How much like the colors, brush strokes, etc?
+
+<img src="./images/style_xfer/Noise2Style.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Uses VGG Architecture
+<img src="./images/style_xfer/gaff_ketch.png"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/style_xfer/gaff_ketch2.png"  width="700"></script></section><section  data-markdown><script type="text/template">## Resources
+Fast.ai 2018, Lesson 13, http://course.fast.ai/lessons/lesson13.html
+
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-13-43454b21a5d0
+
+<Need link to my code></script></section><section  data-markdown><script type="text/template">## Loss
+
+3D: Move down the hill, quickest, without going into next valley
+
+Now do the same thing in a million dimensions
+
+<img src="./images/web_reuse/hillside.jpg"  width="700">
+</script></section><section  data-markdown><script type="text/template">## Generative Adversarial Network
+
+* Two networks
+    
+    * Generator creates images
+
+    * Discriminator detects frauds
+
+* Train the two networks together
+</script></section><section  data-markdown><script type="text/template"><img src="./images/Towards/0_Ri0SCTARdQ9qZg_8.png"  width="1000">
+https://towardsdatascience.com/iclr-nvidia-progressive-generative-adversarial-networks-gans-explained-with-art-forgery-b315fe868bcd
+</script></section><section  data-markdown><script type="text/template">## Appeal of GANs
+
+* Surprise, randomness of result
+
+    * Some good, some obviously bad
+
+<img src="./images/fastai/bedrooms.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Challenges
+
+Mode Collapse
+
+<img src="./images/glagolista/DgvKu-GXUAAimZm.jpg"  width="400">
+<img src="./images/glagolista/DhZA-HwWkAAFKsu.jpg"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Resources
+
+Fast.ai 2018, Lesson 12, http://course.fast.ai/lessons/lesson12.html
+
+SN-GAN, https://github.com/pfnet-research/sngan_projection
+
+SAGAN, https://towardsdatascience.com/not-just-another-gan-paper-sagan-96e649f01a6b
+
+    https://github.com/heykeetae/Self-Attention-GAN
+</script></section><section  data-markdown><script type="text/template">## Cycle GAN
+
+<img src="./images/fastai/Horse2Zebra.png"  width="600">
+</script></section><section  data-markdown><script type="text/template">## Cycle-consistency Loss
+
+<img src="./images/Towards/CycleConsistencyLoss.jpg"  width="600">
+
+https://towardsdatascience.com/cyclegans-and-pix2pix-5e6a5f0159c4
+</script></section><section  data-markdown><script type="text/template">## Two Datasets
+
+Sailboat Pictures ~ 400
+
+<img src="./images/wctss/31914199_21.jpg"  width="200">
+
+Sailboat Watercolor Paintings ~ 400
+
+<img src="./images/web/9a019eb26a6.jpg"  width="200">
+</script></section><section  data-markdown><script type="text/template">## A lot of processing later
+<img src="./images/cycle_gan/Sail1.png"  width="400">
+<img src="./images/cycle_gan/Sail2.png"  width="400"></script></section><section  data-markdown><script type="text/template"><img src="./images/cycle_gan/Sail5.png"  width="400">
+<img src="./images/cycle_gan/Sail6.png"  width="400"></script></section><section  data-markdown><script type="text/template"><img src="./images/cycle_gan/Sail7.png"  width="400">
+<img src="./images/cycle_gan/Sail8.png"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Comments from Alena Harley
+Total datasets are small ~400-500 images in each direction. I modified multiplicative factor of cyclic loss to assign more importance to cyclic loss rather than to the discrimination loss.
+
+I also experimented with dropout, and number of ResNet blocks, mostly to learn the code details. Trained for 200 epochs (~12 hrs on aws p3 instance)
+
+http://forums.fast.ai/t/cycle-gan-art-completing-visual-loop/15279/2</script></section><section  data-markdown><script type="text/template"><img src="./images/alena_harley/StainedGlassLandscape.jpg"  width="1000"></script></section><section  data-markdown><script type="text/template">## Sketch to Art Approach
+
+@glagolisa
+
+<img src="./images/glagolista/OriginalSketch.jpg"  width="400">
+<img src="./images/glagolista/Sarin_FonthillCastle_DoylestownPA.jpg"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Lessons Learned
+
+Model uses a lot of GPU memory.  256px only supports batch size of 1 in 4GB GPU.
+
+Images - TrainA, TrainB, TestA, TestB
+
+Keep Jupyter Connection Live
+
+Progressive growing image size may work
+
+Be prepared to restart Jupyter server.  Probably a small memory leak
+</script></section><section  data-markdown><script type="text/template">## Lessons cont'd
+
+Checkpoints directory has incrementally saved models
+
+Changing image size overrides checkpoints of same number. 
+
+    Always starts with 1
+
+
+
+
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"fade"};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+            Reveal.initialize(options);
+        </script>
+    </body>
+</html>
