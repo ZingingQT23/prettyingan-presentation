@@ -79,34 +79,33 @@ Convert an image into an image painted in the style of a painting.
 <img src="./images/fastai/RobinAsVanGogh.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Training Data
 
 <img src="./images/style_xfer/noise.png"  width="400">
-<img src="./images/wctss/_26169029_1.jpg"  width="400">
+<img src="./images/wctss/26169029_1.jpg"  width="400">
 <img src="./images/web/9a019eb26a6.jpg"  width="400">
-</script></section><section  data-markdown><script type="text/template">## Neural Net Layers
-
-<img src="./images/NN_layers.png"  width="400">
-</script></section><section  data-markdown><script type="text/template">
-## Content Loss 
-
-How much like the source image?
-
-<img src="./images/style_xfer/Noise2Content.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Style Loss
-
-How much like the colors, brush strokes, etc?
-
-<img src="./images/style_xfer/Noise2Style.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Uses VGG Architecture
-<img src="./images/style_xfer/gaff_ketch.png"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/style_xfer/gaff_ketch2.png"  width="700"></script></section><section  data-markdown><script type="text/template">## Resources
-Fast.ai 2018, Lesson 13, http://course.fast.ai/lessons/lesson13.html
-
-https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-13-43454b21a5d0
-
-<Need link to my code></script></section><section  data-markdown><script type="text/template">## Loss
+</script></section><section  data-markdown><script type="text/template">## Loss
 
 3D: Move down the hill, quickest, without going into next valley
 
 Now do the same thing in a million dimensions
 
 <img src="./images/web_reuse/hillside.jpg"  width="700">
-</script></section><section  data-markdown><script type="text/template">## Generative Adversarial Network
+</script></section><section  data-markdown><script type="text/template">## Neural Net Layers
+
+<img src="NN_layers.png"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Style Loss
+
+How much like the colors, brush strokes, etc?
+
+<img src="./images/style_xfer/Noise2Style.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Content Loss 
+
+How much like the source image?
+
+<img src="./images/style_xfer/Noise2Content.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Uses VGG Architecture
+<img src="./images/style_xfer/gaff_ketch.png"  width="700"></script></section><section  data-markdown><script type="text/template"><img src="./images/style_xfer/gaff_ketch2.png"  width="700"></script></section><section  data-markdown><script type="text/template">## Resources
+Fast.ai 2018, Lesson 13, http://course.fast.ai/lessons/lesson13.html
+
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-13-43454b21a5d0
+
+https://github.com/ai-tampa-study-group/prettyingan/blob/master/style-transfer-sail-style2.ipynb</script></section><section  data-markdown><script type="text/template">## Generative Adversarial Network
 
 * Two networks
     
@@ -123,15 +122,20 @@ https://towardsdatascience.com/iclr-nvidia-progressive-generative-adversarial-ne
 
     * Some good, some obviously bad
 
-<img src="./images/fastai/bedrooms.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Challenges
+<img src="./images/fastai/bedrooms.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Helena Sarin
+
+<img src="./images/sarin_SNGAN_proj/43112674762_216040764c_z.jpg"  width="600"></script></section><section  data-markdown><script type="text/template">## SNGAN w Projection
+<img src="./images/sarin_SNGAN_proj/42445720804_1eb994643a_z.jpg"  width="600"></script></section><section  data-markdown><script type="text/template"><img src="./images/sarin_SNGAN_proj/42257490185_36b992c45b_z.jpg"  width="600"></script></section><section  data-markdown><script type="text/template"><img src="./images/sarin_SNGAN_proj/41376053110_af21399ce3_z.jpg"  width="600"></script></section><section  data-markdown><script type="text/template"><img src="./images/sarin_SNGAN_proj/28398353437_d88388368e_z.jpg"  width="600"></script></section><section  data-markdown><script type="text/template"><img src="./images/sarin_SNGAN_proj/29420698068_6d0bf16a0e_o.jpg"  width="600"></script></section><section  data-markdown><script type="text/template">## Challenges
 
 Mode Collapse
 
 <img src="./images/glagolista/DgvKu-GXUAAimZm.jpg"  width="400">
-<img src="./images/glagolista/DhZA-HwWkAAFKsu.jpg"  width="400">
+<img src="./images/glagolista/DhZA-HwWkAAFKsu.jpg"  width="400"></script></section><section  data-markdown><script type="text/template">Checkerboard
+<img src="./images/sarin_SNGAN_proj/40221419780_7fb9716f2f_z.jpg"  width="600">
 </script></section><section  data-markdown><script type="text/template">## Resources
 
 Fast.ai 2018, Lesson 12, http://course.fast.ai/lessons/lesson12.html
+</script></section><section  data-markdown><script type="text/template">## Newer GAN Types
 
 SN-GAN, https://github.com/pfnet-research/sngan_projection
 
@@ -189,7 +193,12 @@ Checkpoints directory has incrementally saved models
 Changing image size overrides checkpoints of same number. 
 
     Always starts with 1
+--- 
+## Resources
 
+Fast.ai 2018, Lesson 12, http://course.fast.ai/lessons/lesson12.html
+
+https://github.com/ai-tampa-study-group/prettyingan/blob/master/cyclegan-growing-gans-256.ipynb
 
 
 
