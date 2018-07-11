@@ -66,11 +66,26 @@ https://www.flickr.com/photos/tarelki/sets/72157694589553071
     * Nvidia GPU
     * Differentiable Program (Deep Learning) Framework
         * PyTorch, Keras/Tensorflow, etc.
+    * Can Rent Paperspace GPU about $0.40/hour
 </script></section><section  data-markdown><script type="text/template">## Fast.ai
 
 http://www.fast.ai/ Deep Learning Part 1 & 2
 
 Code examples derived from Lessons
+</script></section><section  data-markdown><script type="text/template">## Fast.ai Course
+
+* Year of coding
+* High school math
+* Practical, State of the Art Model
+* Free
+
+14 Lessons - Practical and Cutting Edge
+
+Smart, motivated --> Industrial-grade ML </script></section><section  data-markdown><script type="text/template">## Imposter Syndrome
+
+psychological pattern in which an individual doubts their accomplishments, and has a persistent internalized fear of being exposed as a "fraud" - wikipedia
+
+https://en.wikipedia.org/wiki/Impostor_syndrome
 </script></section><section  data-markdown><script type="text/template">## Style Transfer
 
 Convert an image into an image painted in the style of a painting.
@@ -81,6 +96,9 @@ Convert an image into an image painted in the style of a painting.
 <img src="./images/style_xfer/noise.png"  width="400">
 <img src="./images/wctss/26169029_1.jpg"  width="400">
 <img src="./images/web/9a019eb26a6.jpg"  width="400">
+</script></section><section  data-markdown><script type="text/template">## Getting Data
+
+https://github.com/hardikvasa/google-images-download
 </script></section><section  data-markdown><script type="text/template">## Loss
 
 3D: Move down the hill, quickest, without going into next valley
@@ -164,8 +182,7 @@ Sailboat Watercolor Paintings ~ 400
 <img src="./images/cycle_gan/Sail1.png"  width="400">
 <img src="./images/cycle_gan/Sail2.png"  width="400"></script></section><section  data-markdown><script type="text/template"><img src="./images/cycle_gan/Sail5.png"  width="400">
 <img src="./images/cycle_gan/Sail6.png"  width="400"></script></section><section  data-markdown><script type="text/template"><img src="./images/cycle_gan/Sail7.png"  width="400">
-<img src="./images/cycle_gan/Sail8.png"  width="400">
-</script></section><section  data-markdown><script type="text/template">## Comments from Alena Harley
+<img src="./images/cycle_gan/Sail8.png"  width="400"></script></section><section  data-markdown><script type="text/template">## Comments from Alena Harley
 Total datasets are small ~400-500 images in each direction. I modified multiplicative factor of cyclic loss to assign more importance to cyclic loss rather than to the discrimination loss.
 
 I also experimented with dropout, and number of ResNet blocks, mostly to learn the code details. Trained for 200 epochs (~12 hrs on aws p3 instance)
@@ -176,15 +193,45 @@ http://forums.fast.ai/t/cycle-gan-art-completing-visual-loop/15279/2</script></s
 
 <img src="./images/glagolista/OriginalSketch.jpg"  width="400">
 <img src="./images/glagolista/Sarin_FonthillCastle_DoylestownPA.jpg"  width="400">
-</script></section><section  data-markdown><script type="text/template">## Lessons Learned
+</script></section><section  data-markdown><script type="text/template">## Fast and Cheap
+[Stanford DAWNBench](https://dawn.cs.stanford.edu/benchmark/#cifar10-train-time)
+<img src="./images/DAWNBench_speed.png"  width="600"></script></section><section  data-markdown><script type="text/template"><img src="./images/DAWNBench_train_price.png"  width="600"></script></section><section  data-markdown><script type="text/template">## Fast.ai Tricks
 
-Model uses a lot of GPU memory.  256px only supports batch size of 1 in 4GB GPU.
+#### Start with Transfer Learning
+
+* Leslie Smiths 1 Cycle
+
+* Variable Momentum
+
+* Progressive Resizing
+
+* Test-Time Augmentation
+
+* Weight Decay
+</script></section><section  data-markdown><script type="text/template">## Cloud GPU Computer
+
+AWS Spot instances
+
+Extra GPUs
+
+Half precision Volta
+</script></section><section  data-markdown><script type="text/template">## Parameters
+
+* Different Kernel Sizes
+
+* Number of Kernels
+
+* Number of Layer Groups
+
+* Size of Layer Groups</script></section><section  data-markdown><script type="text/template">## Scott's Lessons Learned
+
+Model uses a lot of GPU memory.  128px only supports batch size of 4 in 4GB GPU.
 
 Images - TrainA, TrainB, TestA, TestB
 
 Keep Jupyter Connection Live
 
-Progressive growing image size may work
+Progressive resizing image may work
 
 Be prepared to restart Jupyter server.  Probably a small memory leak
 </script></section><section  data-markdown><script type="text/template">## Lessons cont'd
@@ -194,12 +241,17 @@ Checkpoints directory has incrementally saved models
 Changing image size overrides checkpoints of same number. 
 
     Always starts with 1
---- 
+</script></section><section  data-markdown><script type="text/template">
 ## Resources
 
 Fast.ai 2018, Lesson 12, http://course.fast.ai/lessons/lesson12.html
 
 https://github.com/ai-tampa-study-group/prettyingan/blob/master/cyclegan-growing-gans-256.ipynb
+</script></section><section  data-markdown><script type="text/template">## Super Resolution / Enhance
+
+Train Smaller Resolution Image
+
+Build a Higher Resolution Image output
 
 
 
